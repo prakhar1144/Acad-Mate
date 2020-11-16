@@ -1,0 +1,113 @@
+{% load static %}
+<html>
+    <head>
+        <title>Acad-Mate</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!--        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">-->
+<!--        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="page-header">
+            {% if user.is_authenticated %}
+                <a href="{% url 'post_new' %}" class="top-menu">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+</svg>
+                </a>
+                <a href="{% url 'post_draft_list' %}" class="top-menu"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-card-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M14.5 3h-13a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+  <path fill-rule="evenodd" d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5z"/>
+  <circle cx="3.5" cy="5.5" r=".5"/>
+  <circle cx="3.5" cy="8" r=".5"/>
+  <circle cx="3.5" cy="10.5" r=".5"/>
+</svg>          </a>
+            {% endif %}
+            <h1><a href="/">Acad-Mate</a></h1>
+        </div>
+        <div class="container">
+<!--            <div class="row">-->
+<!--                <div class="col-md-8">-->
+                {% block content %}
+                {% endblock %}
+<!--                </div>-->
+<!--            </div>-->
+        </div>
+<!--         <footer>
+                <div class="row">
+                    <div class="col-sm"  id="col1">
+                        <ul>
+                            <li><a href="#"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M8 3.293l6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+  <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+</svg>  &nbsp;Home</a></li>
+                            <li><a href="#"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-alarm-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M6 .5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H9v1.07a7.001 7.001 0 0 1 3.274 12.474l.601.602a.5.5 0 0 1-.707.708l-.746-.746A6.97 6.97 0 0 1 8 16a6.97 6.97 0 0 1-3.422-.892l-.746.746a.5.5 0 0 1-.707-.708l.602-.602A7.001 7.001 0 0 1 7 2.07V1h-.5A.5.5 0 0 1 6 .5zM.86 5.387A2.5 2.5 0 1 1 4.387 1.86 8.035 8.035 0 0 0 .86 5.387zM11.613 1.86a2.5 2.5 0 1 1 3.527 3.527 8.035 8.035 0 0 0-3.527-3.527zM8.5 5.5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9V5.5z"/>
+</svg>  &nbsp;Get updates</a></li>
+                            <li><a href="#"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+</svg>  &nbsp;Feedback</a></li>
+                            <li><a href="mailto:prakhar8414@gmail.com"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-envelope-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
+</svg>  &nbsp;Message</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm" id="col2">
+                        <p style="padding-top: 30px; font-size: 18pt; color: #fff"><strong>Section</strong></p>
+                        <ul>
+                            <li><a href="{% url 'Space_section' %}"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-caret-right-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+</svg>  &nbsp;Space</a></li>
+                            <li><a href="{% url 'Tech_section' %}"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-caret-right-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+</svg>  &nbsp;Technology</a></li>
+                            <li><a href="{% url 'Other_section' %}"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-caret-right-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+</svg>  &nbsp;Others</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm"  id="col3">
+                        <div style="margin-top: 10px; padding-bottom:20px; " class="container">
+                            <p style="text-align: center; color: #fff; font-size: 18pt;"><strong>About UniDom</strong></p>
+                            <p style="text-align: center; color: #fff">UniDom is a blogging site developed by me as a part of Django learning projects. The Blogs are not focussed to a particular area, so here you can read about various random topics of the universe, hence the name : Universe + Random = UniDom. </p>
+                        </div>
+                            <a href="https://www.facebook.com/prakhar.pratyush.12" style="margin-left: 20%;">
+                                <img src="{% static 'blog/facebook.png' %}" >
+                            </a>
+                            <a href="https://github.com/prakhar1144" style="margin-left: 8%;">
+                                <img src="{% static 'blog/github.png' %}" >
+                            </a>
+                            <a href="https://www.linkedin.com/in/prakhar-pratyush-9b93b2192/" style="margin-left: 8%;">
+                                <img src="{% static 'blog/linkedin.png' %}" >
+                            </a>
+                    </div>
+                </div>
+            <p style="text-align: center; color: #fff; padding-top: 5px; margin-bottom: 0px;">Copyright © 2020 <a href="#"> &nbsp;Prakhar Pratyush</a></p>
+        </footer> -->
+
+
+<!--        <footer class="container-fluid">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Join Us</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="footer-sm">
+                <a href="https://www.facebook.com/prakhar.pratyush.12">
+                    <img src="{% static 'blog/facebook.png' %}" alt="My image">
+                </a>
+                <a href="https://www.instagram.com/prakhar_pratyush/">
+                    <img src="{% static 'blog/instagram.png' %}" alt="My image">
+                </a>
+                <a href="http://twitter.com/PrakharPratyus9?s=08">
+                    <img src="{% static 'blog/twitter.png' %}" alt="My image">
+                </a>
+            </div>
+	    </footer>-->
+    </body>
+</html>

@@ -1,0 +1,46 @@
+{% extends 'baseapp/base.html' %}
+{% block content %}
+<div id='title'><h3>Frequently Asked Questions</h3></div>
+
+<div class="accordion" id="accordionExample" style="padding-top: 50px;">
+  <div class="card" style="filter: drop-shadow(0 0 6px grey);">
+    <div class="card-header bg-info" id="headingOne">
+      <h2 class="mb-0" >
+        <button class="btn  btn-block text-center" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <a href="https://medium.com/nith-experience/35-nith-faqs-e298d24618c" style="color: inherit;"><b> 35+ FAQs </b></a>
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+        Go through the 35+ FAQs mentioned above.
+        <br>
+        Still have some Questions...?
+        <br>
+        Do ask us !
+      </div>
+  </div>
+  <br>
+  <div class="card" style="filter: drop-shadow(0 0 6px grey);">
+    <div class="card-header bg-info" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="btn btn-block text-center collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <a href="mailto:prakhar8414@gmail.com" style="color: inherit;"><b>Ask Your Question</b></a>
+        </button>
+      </h2>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+        Do Mention your name and Roll !
+        <br>
+        We'll reply asap...
+        <br>
+        Till then.. 
+        Enjoy !
+      </div>
+    </div>
+  </div>
+ </div>
+
+{% endblock %}

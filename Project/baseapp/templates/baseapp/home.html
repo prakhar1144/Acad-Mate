@@ -1,0 +1,75 @@
+{% extends 'baseapp/base.html' %}
+{% block content %}
+<div id='title'><h3>Acad-Mate</h3></div>
+
+<div class='row'>
+
+  <div class='col-md-4' style="padding-top: 40px; filter: drop-shadow(0 0 9px grey);">
+    <div class="card text-white bg-info mb-3" style="max-width: 18rem; margin: 0 auto;">
+      <div class="card-header" style="text-align: center; font-size: 35px; font-family: 'Squada One', cursive;">SYLLABUS</div>
+        <div class="card-body">
+       <!--  <h5 class="card-title">Info card title</h5> -->
+          <p class="card-text">Get to know about the syllabus, credits etc of your respective branch.</p>
+          <div style="text-align: center;"><a href="{% url 'syllabus' %}" class="card-link" style="color: inherit; font-size: 18px; ">VISIT</a></div>
+        </div>
+    </div>
+  </div>
+
+  <div class='col-md-4' style="padding-top: 40px; filter: drop-shadow(0 0 9px grey);">
+    <div class="card text-white bg-info mb-3" style="max-width: 18rem; margin: 0 auto;">
+      <div class="card-header" style="text-align: center; font-size: 35px; font-family: 'Squada One', cursive;">E-RESOURCES</div>
+        <div class="card-body">
+       <!--  <h5 class="card-title">Info card title</h5> -->
+          <p class="card-text">Get the important Books, videos recommended by Seniors and Professors.</p>
+          <div style="text-align: center;"><a href="{% url 'eresources' %}" class="card-link" style="color: inherit; font-size: 18px; ">VISIT</a></div>
+        </div>
+    </div>
+  </div>
+
+  <div class='col-md-4' style="padding-top: 40px; filter: drop-shadow(0 0 9px grey);">
+    <div class="card text-white bg-info mb-3" style="max-width: 18rem; margin: 0 auto;">
+      <div class="card-header" style="text-align: center; font-size: 35px; font-family: 'Squada One', cursive;">Q-PAPERS</div>
+        <div class="card-body">
+       <!--  <h5 class="card-title">Info card title</h5> -->
+          <p class="card-text">Get the previous year Mid semester and End Semester question papers.</p>
+          <div style="text-align: center;"><a href="{% url 'qpaper' %}" class="card-link" style="color: inherit; font-size: 18px; ">VISIT</a></div>
+        </div>
+    </div>
+  </div>
+
+  <div class='col-md-4' style="padding-top: 40px; filter: drop-shadow(0 0 9px grey);">
+    <div class="card text-white bg-info mb-3" style="max-width: 18rem; margin: 0 auto;">
+      <div class="card-header" style="text-align: center; font-size: 35px; font-family: 'Squada One', cursive;">BLOGS</div>
+        <div class="card-body">
+       <!--  <h5 class="card-title">Info card title</h5> -->
+          <p class="card-text">Read some interesting and helpful blogs for your college journey, written by seniors.</p>
+          <div style="text-align: center;"><a href="http://127.0.0.1:8000/blog/" class="card-link" style="color: inherit; font-size: 18px; ">VISIT</a></div>
+        </div>
+    </div>
+  </div>
+
+  <div class='col-md-4' style="padding-top: 40px; filter: drop-shadow(0 0 9px grey);">
+    <div class="card text-white bg-info mb-3" style="max-width: 18rem; margin: 0 auto;">
+      <div class="card-header" style="text-align: center; font-size: 35px; font-family: 'Squada One', cursive;">FAQs</div>
+        <div class="card-body">
+       <!--  <h5 class="card-title">Info card title</h5> -->
+          <p class="card-text"> Before asking any query, have a look over the Frequently Asked Questions.</p>
+          <div style="text-align: center;"><a href="{% url 'faq' %}" class="card-link" style="color: inherit; font-size: 18px; ">VISIT</a></div>
+        </div>
+    </div>
+  </div>
+
+  <div class='col-md-4' style="padding-top: 40px; filter: drop-shadow(0 0 9px grey);">
+    <div class="card text-white bg-info mb-3" style="max-width: 18rem; margin: 0 auto;">
+      <div class="card-header" style="text-align: center; font-size: 35px; font-family: 'Squada One', cursive;">CONTRIBUTORS</div>
+        <div class="card-body">
+       <!--  <h5 class="card-title">Info card title</h5> -->
+          <p class="card-text">Feel free to contribute in any means(Add a feature, useful resources, previous year paper).</p>
+          <div style="text-align: center;"><a href="{% url 'contributors' %}" class="card-link" style="color: inherit; font-size: 18px; ">VISIT</a></div>
+        </div>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}
