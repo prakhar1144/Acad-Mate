@@ -23,4 +23,26 @@ env\Scripts\activate
 ```
 pip install -r requirements.txt
 ```
-* 
+* Headover to project directory
+```
+cd Project
+```
+* Make migrations using
+```
+py manage.py makemigrations
+```
+* Migrate
+```
+py manage.py migrate
+```
+* Create a superuser
+```
+py manage.py createsuperuser
+```
+* Run server using
+```
+py manage.py runserver
+```
+* Push changes
+```
+```
