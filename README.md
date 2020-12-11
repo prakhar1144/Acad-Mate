@@ -1,5 +1,7 @@
 # Acad-Mate
+![Acadmate Homepage](https://github.com/prakhar1144/Acad-Mate/blob/master/Acadmate%20homepaage.png)
 ### A web app for the academic help of NITH Freshers.
+![](https://img.shields.io/badge/Contributions-Welcome-success)
 ## __Tech Stack__
 * __Frontend__
   * HTML/CSS/Bootstrap
